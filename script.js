@@ -46,6 +46,9 @@ function nextQuestion(){
   document.getElementById('option-a').style.color = "#8b7d6b";
   document.getElementById('option-b').style.color = "#8b7d6b";
   document.getElementById('option-c').style.color = "#8b7d6b";
+  document.getElementById('option-a').disabled = false;
+  document.getElementById('option-b').disabled = false;
+  document.getElementById('option-c').disabled = false;
 
   if(currentQuestionIndex >= questions.length){
     username = document.getElementById('username').value;
@@ -72,6 +75,7 @@ function nextQuestion(){
 function checkAnswer(opt){
 	let opt_p = 'option-'+opt;
 	let ans = document.getElementById(opt_p).textContent;
+	document.getElementById(opt_p).disabled = true;
   if(ans === questions[currentQuestionIndex].antwort1){
   	document.getElementById(opt_p).style.color = "#7CBB69";
     score += 1;
