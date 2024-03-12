@@ -19,8 +19,8 @@ async function startQuiz() {
 function displayQuestion() {
 
 	document.getElementById('option-a').textContent = '1.'+users[0].user+' | '+users[0].score;
-  document.getElementById('option-b').textContent = '1.'+users[1].user+' | '+users[0].score;;
-  document.getElementById('option-c').textContent = '1.'+users[2].user+' | '+users[0].score;;
+  document.getElementById('option-b').textContent = '1.'+users[1].user+' | '+users[1].score;;
+  document.getElementById('option-c').textContent = '1.'+users[2].user+' | '+users[2].score;;
 }
 
 function leaderbord(){
